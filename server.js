@@ -1,11 +1,14 @@
 /* === External Modules === */
 const express = require("express");
+const methodOverride = require("method-override");
 
 
 
 /* === Internal Modules === */
 
-// === db connections
+    // === db connections
+
+require("./config/db.connection");
 
 /* === System variables === */
 
@@ -14,18 +17,33 @@ const PORT = 4748;
 
 /* === System configureation === */
 
+app.set("view engine", "ejs");
+
+app.use(express.static("public"));
+
+app.use(express.urlencoded({ extended: false}));
+
+app.use(methodOverride("_method"));
+
 /* === Middleware === */
+
+    // == Logger
+
+app.use(function (req, res, next){
+    console.log(`${req.method}` - `${req.url}`);
+    next();
+});
 
 /* === Routes === */
 
-// == defualt routes
+    // == defualt routes
 
-//--- Home ---
+    //--- Home ---
 app.get("/", function (req, res){
-    res.send("Turn The Key");
+    res.render("./home");
 });
 
-// == utility routes
+    // == utility routes
 
 /* === Server Listener === */
 
