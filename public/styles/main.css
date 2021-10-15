@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     background-color: grey;
-    border: 2px solid black;
+    
 }
 
 .new-bike {
@@ -9,10 +9,19 @@
     max-width: 50vh;
 
 }
+.bikes{
+    display: flex;
+    justify-content: center;
+}
 
 img {
     max-height: 200px;
     max-width: auto;
+    border-radius: 10px;
+}
+
+tr {
+    color: whitesmoke;
 }
 
 
