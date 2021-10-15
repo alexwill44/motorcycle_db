@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto DB</title>
+
+            <!-- Styles -->
+
+    <link rel="stylesheet" href="/styles/main.css">
+
+</head>
+<body>
+    
+    <h1>Stable</h1>
+    <% for(let i = 0; i <bikes.length; i++){ %>  <% const bike = bikes[i] %>  
+    <div class="bikes">
+        <img src="<%= bike.image %>" alt="bikegoeshere">
+    </div>
+
+<% } %>
+</body>
+</html>

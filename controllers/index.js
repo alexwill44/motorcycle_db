@@ -1,3 +1,3 @@
 module.exports = { 
-    bike: require("./bikesCOntroller");
+    bike: require("./bikesController")
 };

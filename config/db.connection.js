@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const MONGODB_URI = "mongodb://localhost:27017/motocycle_db" 
+const MONGODB_URI = "mongodb://localhost:27017/motorcycle_db" 
 
 mongoose.connect(MONGODB_URI);
 

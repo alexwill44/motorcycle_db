@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch-sass": "sass -w sass/source:public/styles",
+    "watch-nodemon": "nodemon server.js",
+    "dev": "open http://localhost:4748/ && concurrently --handle-input -n server,sass -c 'bgGreen.bold,bgRed.bold' 'npm:watch-nodemon' 'npm:watch-sass' rs"
   },
   "author": "AlexWill44",
   "license": "ISC",

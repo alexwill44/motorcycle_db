@@ -6,7 +6,9 @@ const methodOverride = require("method-override");
 
 /* === Internal Modules === */
 
-    // === db connections
+const controllers = require("./controllers");
+  
+// === db connections
 
 require("./config/db.connection");
 
@@ -42,6 +44,9 @@ app.use(function (req, res, next){
 app.get("/", function (req, res){
     res.render("./home");
 });
+
+// == Bikes 
+app.use("/bikes", controllers.bike);
 
     // == utility routes
 
